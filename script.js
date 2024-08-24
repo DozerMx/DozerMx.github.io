@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             keyContainer.style.display = "none";
             inicioContainer.style.display = "block";
         } else {
-            alert("No intentes adivinar la contraseña...");
+            alert("🤬¡Contraseña incorrecta!〽️");
         }
     });
 
