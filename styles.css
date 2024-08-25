@@ -2,47 +2,47 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f7f7f7; /* Fondo blanco por defecto */
     margin: 0;
-    padding: 20px;
+    padding: 0;
     color: #333;
+    overflow: hidden:
+    
 }
 
 .container {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto; /* Elimina el margen horizontal automático */
+    padding: 20px; /* Espaciado interno */
     background-color: #fff; /* Fondo blanco para las secciones del contenedor */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    position: relative; /* Posición relativa para los ajustes internos */
 }
 
-/* Ajustar el contenedor que rodea los resultados */
+.top-image {
+    position: relative;
+    right: 32px; /* Mueve la imagen 50px hacia la derecha */
+    top: 20px;  /* Mueve la imagen 20px hacia abajo */
+    width: 120%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 #content {
-    background-color: #fff; /* Fondo blanco para la página de resultados */
-    box-shadow: none; /* Elimina cualquier sombra del contenedor */
-    border: none; /* Elimina cualquier borde del contenedor */
-    padding: 40px; /* Aumenta el padding para dar más espacio interno */
-    margin: 0; /* Elimina el margen */
-    max-width: 800px; /* Ajusta el max-width para que el contenedor sea más grande */
-    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
-    position: fixed; /* Fija el contenedor en la pantalla */
-    top: 50%; /* Coloca el contenedor a mitad de la pantalla desde la parte superior */
-    left: 50%; /* Coloca el contenedor a mitad de la pantalla desde la izquierda */
-    transform: translate(-50%, -50%); /* Ajusta el contenedor para que esté perfectamente centrado */
-    z-index: 1000; /* Asegura que el contenedor esté sobre otros elementos */
-    overflow: auto; /* Permite que el contenido se desplace si es necesario */
-    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del contenedor */
-}
-
-/* Asegúrate de que los elementos dentro del contenedor de resultados también sean blancos */
-#content .generar-comprobante {
-    background-color: #fff; /* Fondo blanco para el contenido generado */
-}
-
-.header img {
+    background-color: #fff;
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+    margin: 0;
+    max-width: 400px;
     width: 100%;
-    max-width: 175px;
-    margin-bottom: 10px;
-    margin-left: -20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow: hidden; /* Evita el desplazamiento dentro del contenedor */
+    box-sizing: border-box;
+    height: 800px; /* Ajusta según el contenido que deseas mostrar */
 }
 
 .status {
@@ -78,24 +78,28 @@ body {
 
 .account-balance {
     background-color: transparent; /* Fondo transparente */
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    padding: 15px; /* Espaciado interno para más longitud */
+    border-radius: 5px; /* Bordes redondeados */
+    display: flex; /* Flexbox para alinear la imagen y el texto */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 20px; /* Espaciado inferior */
+    margin-top: 20px; /* Ajusta este valor para mover el cuadro hacia abajo */
     border: 1px solid #ccc; /* Borde gris */
+    width: 100%; /* Ancho completo del contenedor padre */
+    max-width: 400px; /* Ajusta el ancho máximo según sea necesario */
+    height: 55px; /* Ajusta la altura según sea necesario */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
 
 .account-balance img {
-    width: 45px; /* Mantener el tamaño de la imagen */
-    height: 45px;
-    margin-right: 10px;
+    width: 50px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 5px; /* Espacio entre la imagen y el texto */
+    margin-left: -12px; /* Ajusta este valor para mover la imagen más a la izquierda */
 }
 
 .account-balance .available-label {
-    font-weight: 400; /* Peso de fuente más ligero */
-    display: block;
-    color: #1c031d; /* Color del texto */
+    margin-left: -1px; /* Ajusta este valor para mover el texto más a la izquierda */
 }
 
 .account-balance .amount {
@@ -119,19 +123,9 @@ body {
     max-width: 100%;
     height: auto;
     display: inline-block;
-}
-
-/* Agregar al CSS actual */
-.top-image {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 20px;
+    margin-top: 30px;
     
 }
-    
-/* Agrega esto al archivo styles.css */
 
 .key-container {
     display: flex;
@@ -163,14 +157,11 @@ body {
     cursor: pointer;
 }
 
-.amount {
-    font-weight: 300;
-    display: block;
-    color: #707070; /* Color del texto */
-    font-size: 14px;
-}
-
 .key-container button:hover {
     background-color: #0056b3;
+}
 
+.plata-label {
+    color: #707070; /* El mismo color que el valor del disponible */
+    font-weight: 400; /* Ajusta el peso de la fuente si es necesario */
 }

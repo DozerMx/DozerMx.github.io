@@ -36,58 +36,53 @@ document.addEventListener("DOMContentLoaded", function() {
         const referencia = generarReferencia();
 
         // Generar el contenido del comprobante
-const content = `
-    <div class="top-image">
-        <img src="https://i.postimg.cc/Y0Zc0BjL/image.png" alt="Imagen superior" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
-    </div>
-    <div class="header">
-        <img src="https://i.postimg.cc/dtnwMHWX/Picsart-24-08-05-19-19-29-288.jpg" alt="Detalle del Movimiento">
-    </div>
-    <div class="status">
-        <img src="https://i.postimg.cc/65C7fX9n/Picsart-24-08-03-01-31-58-294.png" alt="Envío Realizado" width="150">
-    </div>
-    <div class="detail">
-        <span>Para</span>
-        ${nombre}
-    </div>
-    <div class="detail">
-        <span>¿Cuánto?</span>
-        $ ${valor}
-    </div>
-    <div class="detail">
-        <span>Número Nequi</span>
-        ${telefono}
-    </div>
-    <div class="detail">
-        <span>Fecha</span>
-        ${new Date().toLocaleDateString('es-ES', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        })} a las ${new Date().toLocaleTimeString('es-ES', {
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: true
-        })}
-    </div>
-    <div class="reference">
-        <span>Referencia</span>
-        ${referencia}
-    </div>
-    <div class="detail amount">
-        <span>¿De dónde salió la plata?</span> <!-- Aplica la clase .amount para heredar el color -->
-    </div>
-    <div class="account-balance">
-        <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
-        <div>
-            <span class="available-label">Disponible</span>
-            <span class="amount">$${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
-        </div>
-    </div>
-    <a href="#" class="problem-link">
-        <img src="https://i.postimg.cc/qRKyS8yf/pixelcut-export-1.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
-    </a>
-`;
+        const content = `
+            <div class="top-image">
+                <img src="https://i.postimg.cc/7Ls6sfsv/Picsart-24-08-25-02-28-55-342.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
+            </div>
+            <div class="status"></div>
+            <div class="detail">
+                <span>Para</span>
+                ${nombre}
+            </div>
+            <div class="detail">
+                <span>¿Cuánto?</span>
+                $ ${valor} <!-- Aquí se añade el espacio entre el símbolo y el valor -->
+            </div>
+            <div class="detail">
+                <span>Número Nequi</span>
+                ${telefono}
+            </div>
+            <div class="detail">
+                <span>Fecha</span>
+                ${new Date().toLocaleDateString('es-ES', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                })} a las ${new Date().toLocaleTimeString('es-ES', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true
+                })}
+            </div>
+            <div class="reference">
+                <span>Referencia</span>
+                ${referencia}
+            </div>
+            <div class="detail">
+                <span class="plata-label">¿De dónde salió la plata?</span>
+            </div>
+            <div class="account-balance">
+                <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
+                <div>
+                    <span class="available-label">Disponible</span>
+                    <span class="amount">$ ${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span> <!-- Se añade el espacio aquí también -->
+                </div>
+            </div>
+            <a href="#" class="problem-link">
+                <img src="https://i.postimg.cc/qRKyS8yf/pixelcut-export-1.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
+            </a>
+        `;
 
         // Mostrar el comprobante y ocultar el formulario
         document.getElementById("inicio").style.display = "none";
