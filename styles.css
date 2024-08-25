@@ -164,4 +164,5 @@ body {
 .plata-label {
     color: #707070; /* El mismo color que el valor del disponible */
     font-weight: 400; /* Ajusta el peso de la fuente si es necesario */
+    margin-top: 17px;
 }

@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 })}
             </div>
             <div class="reference">
-                <span>Referencia</span>
-                ${referencia}
+                <span>Referencia</span><br>
+                ${referencia} <!-- Añadimos un salto de línea antes de la referencia -->
             </div>
             <div class="detail">
                 <span class="plata-label">¿De dónde salió la plata?</span>
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
                 <div>
                     <span class="available-label">Disponible</span>
-                    <span class="amount">$ ${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span> <!-- Se añade el espacio aquí también -->
+                    <span class="amount">$ ${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
                 </div>
             </div>
             <a href="#" class="problem-link">
