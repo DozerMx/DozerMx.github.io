@@ -163,6 +163,13 @@ body {
     cursor: pointer;
 }
 
+.amount {
+    font-weight: 300;
+    display: block;
+    color: #707070; /* Color del texto */
+    font-size: 14px;
+}
+
 .key-container button:hover {
     background-color: #0056b3;
 
