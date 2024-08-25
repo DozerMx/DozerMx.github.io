@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <div class="detail">
                 <span>¿Cuánto?</span>
-                $ ${valor} <!-- Aquí se añade el espacio entre el símbolo y el valor -->
+                $ ${valor}
             </div>
             <div class="detail">
                 <span>Número Nequi</span>
@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <div class="reference">
                 <span>Referencia</span><br>
-                ${referencia} <!-- Añadimos un salto de línea antes de la referencia -->
+                ${referencia}
             </div>
-            <div class="detail">
+            <div class="detail" style="margin-top: 30px;">
                 <span class="plata-label">¿De dónde salió la plata?</span>
             </div>
             <div class="account-balance">
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
             <a href="#" class="problem-link">
-                <img src="https://i.postimg.cc/qRKyS8yf/pixelcut-export-1.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
+                <img src="https://i.postimg.cc/qRKyS8yf/pixelcut-export-1.jpg" alt="Problema con el movimiento" style="width: 100%; display: block; margin: 20px auto 0 auto;">
             </a>
         `;
 
@@ -88,5 +88,20 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("inicio").style.display = "none";
         document.getElementById("content").style.display = "block";
         document.getElementById("content").innerHTML = content;
+    });
+
+    // Formatear el número de teléfono mientras se escribe
+    const telefonoInput = document.getElementById("telefono");
+
+    telefonoInput.addEventListener("input", function(event) {
+        let input = event.target.value.replace(/\D/g, ''); // Eliminar todos los caracteres que no son dígitos
+
+        if (input.length > 3 && input.length <= 6) {
+            input = `${input.slice(0, 3)} ${input.slice(3)}`;
+        } else if (input.length > 6) {
+            input = `${input.slice(0, 3)} ${input.slice(3, 6)} ${input.slice(6, 10)}`;
+        }
+
+        event.target.value = input.substring(0, 12); // Limitar la longitud a 12 caracteres incluyendo espacios
     });
 });
