@@ -2,23 +2,23 @@
 body
 
 #inicio {
+    
     background-image: url('https://i.postimg.cc/Hk3dQxZb/20240823-032132.jpg');
-    background-size: cover;
+    background-size: 800px;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /* La imagen de fondo se mantiene fija cuando se desplaza la página */
     color: #7fb3d5;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    box-sizing: border-box;
+    padding: 20;
+    min-height: 200vh;
+    
 }
 
 /* Estilo para el contenedor del formulario para que no tenga fondo o borde */
 .container {
     background: none; /* Sin fondo */
     border: none; /* Sin borde */
-    padding: 20px; /* Espaciado interno para el formulario */
+    padding: 30px; /* Espaciado interno para el formulario */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
 }
 
