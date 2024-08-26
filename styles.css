@@ -1,32 +1,35 @@
+/* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f7f7f7; /* Fondo blanco por defecto */
+    background-color: #f7f7f7;
     margin: 0;
     padding: 0;
     color: #333;
-    overflow: hidden:
-    
+    overflow: hidden;
 }
 
+/* Contenedor principal */
 .container {
     max-width: 400px;
-    margin: 0 auto; /* Elimina el margen horizontal automático */
-    padding: 20px; /* Espaciado interno */
-    background-color: #fff; /* Fondo blanco para las secciones del contenedor */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* Posición relativa para los ajustes internos */
+    position: relative;
 }
 
+/* Imagen superior */
 .top-image {
     position: relative;
-    right: 32px; /* Mueve la imagen 50px hacia la derecha */
-    top: 20px;  /* Mueve la imagen 20px hacia abajo */
+    right: 32px;
+    top: 20px;
     width: 120%;
     max-width: 600px;
     margin: 0 auto;
 }
 
+/* Contenido del comprobante */
 #content {
     background-color: #fff;
     box-shadow: none;
@@ -40,9 +43,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    overflow: hidden; /* Evita el desplazamiento dentro del contenedor */
+    overflow: hidden;
     box-sizing: border-box;
-    height: 800px; /* Ajusta según el contenido que deseas mostrar */
+    height: 800px;
 }
 
 .status {
@@ -59,54 +62,53 @@ body {
 
 .detail {
     margin-bottom: 10px;
-    color: #1c031d; /* Color de texto actualizado */
-    font-weight: 400; /* Peso de fuente más ligero */
+    color: #1c031d;
+    font-weight: 400;
 }
 
 .detail span {
     display: block;
-    font-weight: 400; /* Peso de fuente más ligero */
+    font-weight: 400;
 }
 
 .reference {
     margin-top: 20px;
     padding-top: 10px;
-    /* border-top: 1px solid #ccc; */ /* Elimina esta línea para quitar la línea debajo de la fecha */
-    color: #1c031d; /* Color de texto actualizado */
-    font-weight: 400; /* Peso de fuente más ligero */
+    color: #1c031d;
+    font-weight: 400;
 }
 
 .account-balance {
-    background-color: transparent; /* Fondo transparente */
-    padding: 15px; /* Espaciado interno para más longitud */
-    border-radius: 5px; /* Bordes redondeados */
-    display: flex; /* Flexbox para alinear la imagen y el texto */
-    align-items: center; /* Alinea verticalmente los elementos al centro */
-    margin-bottom: 20px; /* Espaciado inferior */
-    margin-top: 20px; /* Ajusta este valor para mover el cuadro hacia abajo */
-    border: 1px solid #ccc; /* Borde gris */
-    width: 100%; /* Ancho completo del contenedor padre */
-    max-width: 400px; /* Ajusta el ancho máximo según sea necesario */
-    height: 55px; /* Ajusta la altura según sea necesario */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 400px;
+    height: 55px;
+    box-sizing: border-box;
 }
 
 .account-balance img {
-    width: 50px; /* Ajusta el ancho de la imagen según sea necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-right: 5px; /* Espacio entre la imagen y el texto */
-    margin-left: -12px; /* Ajusta este valor para mover la imagen más a la izquierda */
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    margin-left: -12px;
 }
 
-.account-balance .available-label {
-    margin-left: -1px; /* Ajusta este valor para mover el texto más a la izquierda */
+.account-balancel {
+    margin-left: -1px;
 }
 
 .account-balance .amount {
-    font-weight: 300; /* Peso de fuente más ligero */
+    font-weight: 300;
     display: block;
-    color: #707070; /* Color del texto */
-    font-size: 14px; /* Tamaño del texto */
+    color: #707070;
+    font-size: 14px;
 }
 
 .account-balance .amount small {
@@ -124,28 +126,42 @@ body {
     height: auto;
     display: inline-block;
     margin-top: 30px;
-    
 }
 
+/* Estilos para la página de login */
 .key-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #f7f7f7; /* Fondo blanco para la página de clave */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 300px;
 }
 
 .key-container h2 {
     margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
 }
 
 .key-container input {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 200px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 16px;
 }
 
 .key-container button {
@@ -155,14 +171,29 @@ body {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .key-container button:hover {
     background-color: #0056b3;
 }
 
+.key-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* Estilo de la etiqueta "¿De dónde salió la plata?" */
 .plata-label {
-    color: #707070; /* El mismo color que el valor del disponible */
-    font-weight: 400; /* Ajusta el peso de la fuente si es necesario */
+    color: #707070;
+    font-weight: 400;
     margin-top: 17px;
 }
+
+.dispo {  margin-left: -1px;
+    
+       }
