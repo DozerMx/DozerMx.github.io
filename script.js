@@ -1,31 +1,65 @@
 document.addEventListener("DOMContentLoaded", function() {
     const keyContainer = document.getElementById("key-container");
     const inicioContainer = document.getElementById("inicio");
+    const idInput = document.getElementById("id-input");
     const keyInput = document.getElementById("key-input");
     const keySubmit = document.getElementById("key-submit");
 
     keySubmit.addEventListener("click", function() {
+        const id = idInput.value;
         const key = keyInput.value;
-        if (key === "Dozer-xit") {
-            keyContainer.style.display = "none";
-            inicioContainer.style.display = "block";
-        } else {
-            alert("🤬¡Contraseña incorrecta!〽️");
-        }
+
+        // Leer el archivo registros.txt
+        fetch('registros.txt')
+            .then(response => response.text())
+            .then(text => {
+                const lines = text.trim().split('\n');
+                let valid = false;
+
+                for (const line of lines) {
+                    const [fileId, filePassword] = line.split(',');
+                    if (fileId === id && filePassword === key) {
+                        valid = true;
+                        break;
+                    }
+                }
+
+                if (valid) {
+                    keyContainer.style.display = "none";
+                    inicioContainer.style.display = "block";
+                } else {
+                    alert("🤬¡ID o contraseña incorrectos!〽️");
+                }
+            })
+            .catch(error => {
+                console.error("Error al leer registros.txt:", error);
+                alert("Error al verificar el ID y la contraseña. Inténtalo de nuevo más tarde.");
+            });
     });
 
+    // Formato del número de teléfono
+    const telefonoInput = document.getElementById("telefono");
+
+    telefonoInput.addEventListener("input", function(e) {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.length > 10) {
+            value = value.slice(0, 10);
+        }
+        const formattedValue = value.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
+        e.target.value = formattedValue;
+    });
+
+    // Manejo del formulario
     const formulario = document.getElementById("formulario");
     formulario.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        // Obtener los valores del formulario
         const nombre = document.getElementById("nombre").value;
         const telefono = document.getElementById("telefono").value;
         const valor = parseFloat(document.getElementById("valor").value).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-        // Generar una referencia aleatoria con la letra M al principio
         function generarReferencia() {
-            const longitud = 7; // Longitud de la parte numérica
+            const longitud = 7;
             let referencia = 'M';
             for (let i = 0; i < longitud; i++) {
                 referencia += Math.floor(Math.random() * 10);
@@ -35,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const referencia = generarReferencia();
 
-        // Generar el contenido del comprobante
         const content = `
             <div class="top-image">
                 <img src="https://i.postimg.cc/7Ls6sfsv/Picsart-24-08-25-02-28-55-342.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
@@ -66,42 +99,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 })}
             </div>
             <div class="reference">
-                <span>Referencia</span><br>
-                ${referencia}
+                <span>Referencia</span>
+                <span>${referencia}</span>
             </div>
-            <div class="detail" style="margin-top: 30px;">
+            <div class="detail" style="margin-top: 20px;">
                 <span class="plata-label">¿De dónde salió la plata?</span>
             </div>
             <div class="account-balance">
                 <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
                 <div>
-                    <span class="available-label">Disponible</span>
-                    <span class="amount">$ ${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
+                    <span class="dispo">Disponible</span>
+                    <span class="amount">$${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
                 </div>
             </div>
             <a href="#" class="problem-link">
-                <img src="https://i.postimg.cc/qRKyS8yf/pixelcut-export-1.jpg" alt="Problema con el movimiento" style="width: 100%; display: block; margin: 20px auto 0 auto;">
+                <img src="https://i.postimg.cc/qRKyS8yf/pixelcut-export-1.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
             </a>
         `;
 
-        // Mostrar el comprobante y ocultar el formulario
         document.getElementById("inicio").style.display = "none";
         document.getElementById("content").style.display = "block";
         document.getElementById("content").innerHTML = content;
-    });
-
-    // Formatear el número de teléfono mientras se escribe
-    const telefonoInput = document.getElementById("telefono");
-
-    telefonoInput.addEventListener("input", function(event) {
-        let input = event.target.value.replace(/\D/g, ''); // Eliminar todos los caracteres que no son dígitos
-
-        if (input.length > 3 && input.length <= 6) {
-            input = `${input.slice(0, 3)} ${input.slice(3)}`;
-        } else if (input.length > 6) {
-            input = `${input.slice(0, 3)} ${input.slice(3, 6)} ${input.slice(6, 10)}`;
-        }
-
-        event.target.value = input.substring(0, 12); // Limitar la longitud a 12 caracteres incluyendo espacios
     });
 });
