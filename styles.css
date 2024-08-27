@@ -12,7 +12,7 @@ body {
 .container {
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -78,21 +78,6 @@ body {
     font-weight: 400;
 }
 
-/* Ajuste para la referencia */
-.reference span {
-    display: block;
-    font-weight: bold;
-    text-align: center; /* Centra el texto */
-}
-
-/* Estilo para el número de referencia */
-.reference span:first-child {
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-/* Estilos para el balance de cuenta */
 .account-balance {
     background-color: transparent;
     padding: 15px;
@@ -209,6 +194,6 @@ body {
     margin-top: 17px;
 }
 
-.dispo {
-    margin-left: -1px;
-}
+.dispo {  margin-left: -1px;
+    
+       }
