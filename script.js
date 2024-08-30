@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const valor = parseFloat(document.getElementById("valor").value).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
         function generarReferencia() {
-            const longitud = 7;
+            const longitud = 8;
             let referencia = 'M';
             for (let i = 0; i < longitud; i++) {
                 referencia += Math.floor(Math.random() * 10);
