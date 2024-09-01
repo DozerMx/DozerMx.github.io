@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
             <a href="#" class="problem-link">
-                <img src="https://i.postimg.cc/qRKyS8yf/pixelcut-export-1.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
+                <img src="https://i.postimg.cc/prpWM9K8/IMG-20240901-001952.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
             </a>
         `;
 
