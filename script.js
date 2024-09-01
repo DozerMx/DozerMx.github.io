@@ -91,12 +91,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span class="detail-text">$ ${valor}</span>
             </div>
             <div class="detail" style="margin-top: 20px;">
-                <img src="https://i.postimg.cc/nhmF4HNk/Picsart-24-09-01-03-20-32-256.jpg" alt="¿De dónde salió la plata?" class="plata-image" />
+                <span class="plata-label">¿De dónde salió la plata?</span>
             </div>
             <div class="account-balance">
                 <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
                 <div>
-                    <img src="https://i.postimg.cc/nhmF4HNk/Picsart-24-09-01-03-20-32-256.jpg" alt="Disponible" class="dispo-image" />
+                    <span class="dispo" style="font-weight: 500;">Disponible</span> <!-- Aquí se aplica el grosor -->
                     <span class="amount">$${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
                 </div>
             </div>
