@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const keySubmit = document.getElementById("key-submit");
 
     keySubmit.addEventListener("click", function() {
-        const id = idInput.value;
-        const key = keyInput.value;
+        const id = idInput.value.trim();
+        const key = keyInput.value.trim();
 
         fetch("registros.txt")
             .then(response => response.text())
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
     formulario.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        const nombre = document.getElementById("nombre").value;
-        const telefono = document.getElementById("telefono").value;
+        const nombre = document.getElementById("nombre").value.trim();
+        const telefono = document.getElementById("telefono").value.trim();
         const valor = parseFloat(document.getElementById("valor").value).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
         function generarReferencia() {
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const referencia = generarReferencia();
+        const fecha = new Date();
 
         const content = `
             <div class="top-image">
@@ -77,11 +78,11 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <div class="detail">
                 <span>Fecha</span>
-                ${new Date().toLocaleDateString('es-ES', {
+                ${fecha.toLocaleDateString('es-ES', {
                     day: 'numeric',
                     month: 'long',
                     year: 'numeric'
-                })} a las ${new Date().toLocaleTimeString('es-ES', {
+                })} a las ${fecha.toLocaleTimeString('es-ES', {
                     hour: '2-digit',
                     minute: '2-digit',
                     hour12: true
