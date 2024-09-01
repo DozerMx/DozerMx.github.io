@@ -112,7 +112,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aplica el color de la etiqueta de acuerdo a su atributo data-color
         document.querySelectorAll('.label').forEach(span => {
-            span.style.color = span.getAttribute('data-color');
+            span.style.color = '#707070'; // Color específico para las palabras
+        });
+
+        // Aplica el color por defecto a los demás textos
+        document.querySelectorAll('.detail span, .reference span').forEach(span => {
+            span.style.color = '#1c031d'; // Color por defecto
         });
     });
 });
