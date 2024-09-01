@@ -191,9 +191,8 @@ body {
     margin-top: 17px;
 }
 
-/* Estilo para la imagen "Disponible" */
 .dispo-image {
-    width: auto;
-    height: 20px; /* Ajusta el tamaño de la imagen si es necesario */
-    margin-left: -1px;
+    width: 80px; /* Ajusta este valor según el tamaño del texto */
+    height: auto;
+    vertical-align: middle; /* Alinea la imagen verticalmente con el texto */
 }
