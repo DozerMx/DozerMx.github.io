@@ -67,14 +67,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span class="label" data-color="#707070">Para</span><br>
                 <span class="detail-text">${nombre}</span>
             </div>
+            <br>
             <div class="detail">
                 <span class="label" data-color="#707070">Referencia</span><br>
                 <span class="detail-text">${referencia}</span>
             </div>
+            <br>
             <div class="detail">
                 <span class="label" data-color="#707070">Número Nequi</span><br>
                 <span class="detail-text">${telefono}</span>
             </div>
+            <br>
             <div class="detail">
                 <span class="label" data-color="#707070">Fecha</span><br>
                 <span class="detail-text">${new Date().toLocaleDateString('es-ES', {
@@ -87,10 +90,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     hour12: true
                 })}</span>
             </div>
+            <br>
             <div class="detail">
                 <span class="label" data-color="#707070">¿Cuánto?</span><br>
                 <span class="detail-text">$ ${valor}</span>
             </div>
+            <br>
             <div class="detail" style="margin-top: 20px;">
                 <span class="plata-label">¿De dónde salió la plata?</span>
             </div>
