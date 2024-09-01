@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span class="detail-text">$ ${valor}</span>
             </div>
             <div class="detail" style="margin-top: 20px;">
-                <span class="plata-label">¿De dónde salió la plata?</span>
+                <span class="plata-label" style="color: #1c031d;">¿De dónde salió la plata?</span>
             </div>
             <div class="account-balance">
                 <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
