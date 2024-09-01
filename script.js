@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="account-balance">
                 <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
                 <div>
-                    <span class="dispo">Disponible</span>
+                    <span class="dispo" style="font-weight: bold;">Disponible</span> <!-- Aquí se aplica el grosor -->
                     <span class="amount">$${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
                 </div>
             </div>
