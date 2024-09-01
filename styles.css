@@ -191,8 +191,7 @@ body {
     margin-top: 17px;
 }
 
-.dispo-image {
-    width: 10ppx; /* Ajusta este valor según el tamaño del texto */
-    height: auto;
-    vertical-align: middle; /* Alinea la imagen verticalmente con el texto */
+.dispo {
+    color: #1c031d;
+    font-weight: 500;
 }
