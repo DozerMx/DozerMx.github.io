@@ -65,19 +65,19 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="status"></div>
             <div class="detail">
                 <span class="label" data-color="#707070">Para</span><br>
-                <span>${nombre}</span>
+                <span class="detail-text">${nombre}</span>
             </div>
-            <div class="reference">
+            <div class="detail">
                 <span class="label" data-color="#707070">Referencia</span><br>
-                <span>${referencia}</span>
+                <span class="detail-text">${referencia}</span>
             </div>
             <div class="detail">
                 <span class="label" data-color="#707070">Número Nequi</span><br>
-                <span>${telefono}</span>
+                <span class="detail-text">${telefono}</span>
             </div>
             <div class="detail">
                 <span class="label" data-color="#707070">Fecha</span><br>
-                <span>${new Date().toLocaleDateString('es-ES', {
+                <span class="detail-text">${new Date().toLocaleDateString('es-ES', {
                     day: 'numeric',
                     month: 'long',
                     year: 'numeric'
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <div class="detail">
                 <span class="label" data-color="#707070">¿Cuánto?</span><br>
-                <span>$ ${valor}</span>
+                <span class="detail-text">$ ${valor}</span>
             </div>
             <div class="detail" style="margin-top: 20px;">
                 <span class="plata-label">¿De dónde salió la plata?</span>
@@ -112,11 +112,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aplica el color de la etiqueta de acuerdo a su atributo data-color
         document.querySelectorAll('.label').forEach(span => {
-            span.style.color = '#707070'; // Color específico para las palabras
+            span.style.color = span.getAttribute('data-color');
         });
 
-        // Aplica el color por defecto a los demás textos
-        document.querySelectorAll('.detail span, .reference span').forEach(span => {
+        // Aplica el color por defecto a los detalles
+        document.querySelectorAll('.detail-text').forEach(span => {
             span.style.color = '#1c031d'; // Color por defecto
         });
     });
