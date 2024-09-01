@@ -64,19 +64,19 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <div class="status"></div>
             <div class="detail">
-                <span class="label" data-color="#707070">Para</span><br>
+                <span class="label" data-color="#707070">Para</span>
                 <span class="detail-text">${nombre}</span>
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">Referencia</span><br>
+                <span class="label" data-color="#707070">Referencia</span>
                 <span class="detail-text">${referencia}</span>
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">Número Nequi</span><br>
+                <span class="label" data-color="#707070">Número Nequi</span>
                 <span class="detail-text">${telefono}</span>
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">Fecha</span><br>
+                <span class="label" data-color="#707070">Fecha</span>
                 <span class="detail-text">${new Date().toLocaleDateString('es-ES', {
                     day: 'numeric',
                     month: 'long',
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 })}</span>
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">¿Cuánto?</span><br>
+                <span class="label" data-color="#707070">¿Cuánto?</span>
                 <span class="detail-text">$ ${valor}</span>
             </div>
             <div class="detail" style="margin-top: 20px;">
@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Aplica el color por defecto a los detalles
         document.querySelectorAll('.detail-text').forEach(span => {
             span.style.color = '#1c031d'; // Color por defecto
+            span.style.display = 'block'; // Fuerza que el texto esté en la misma línea con el título
         });
     });
 });
