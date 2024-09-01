@@ -199,3 +199,9 @@ body {
 .dispo {  
     margin-left: -1px;
 }
+
+/* Nueva clase para las palabras específicas */
+.highlighted-text {
+    color: #707070; /* Mismo color que el valor del "disponible" */
+    font-weight: bold;
+}
