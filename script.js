@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const keySubmit = document.getElementById("key-submit");
 
     keySubmit.addEventListener("click", function() {
-        const id = idInput.value.trim();
-        const key = keyInput.value.trim();
+        const id = idInput.value;
+        const key = keyInput.value;
 
         fetch("registros.txt")
             .then(response => response.text())
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
     formulario.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        const nombre = document.getElementById("nombre").value.trim();
-        const telefono = document.getElementById("telefono").value.trim();
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
         const valor = parseFloat(document.getElementById("valor").value).toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
         function generarReferencia() {
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const referencia = generarReferencia();
-        const fecha = new Date();
 
         const content = `
             <div class="top-image">
@@ -65,31 +64,31 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <div class="status"></div>
             <div class="detail">
-                <span>Para</span>
+                <span style="color: #707070;">Para</span>
                 ${nombre}
             </div>
             <div class="detail">
-                <span>¿Cuánto?</span>
+                <span style="color: #707070;">¿Cuánto?</span>
                 $ ${valor}
             </div>
             <div class="detail">
-                <span>Número Nequi</span>
+                <span style="color: #707070;">Número Nequi</span>
                 ${telefono}
             </div>
             <div class="detail">
-                <span>Fecha</span>
-                ${fecha.toLocaleDateString('es-ES', {
+                <span style="color: #707070;">Fecha</span>
+                ${new Date().toLocaleDateString('es-ES', {
                     day: 'numeric',
                     month: 'long',
                     year: 'numeric'
-                })} a las ${fecha.toLocaleTimeString('es-ES', {
+                })} a las ${new Date().toLocaleTimeString('es-ES', {
                     hour: '2-digit',
                     minute: '2-digit',
                     hour12: true
                 })}
             </div>
             <div class="reference">
-                <span>Referencia</span><br>
+                <span style="color: #707070;">Referencia</span><br>
                 <span>${referencia}</span>
             </div>
             <div class="detail" style="margin-top: 20px;">
