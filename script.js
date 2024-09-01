@@ -58,66 +58,49 @@ document.addEventListener("DOMContentLoaded", function() {
         const referencia = generarReferencia();
 
         const content = `
-            <div class="top-image">
-                <img src="https://i.postimg.cc/05DxDqc9/pixelcut-export-3.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
-            </div>
-            <div class="status"></div>
-            <div class="detail">
-                <span class="label" data-color="#707070">Para</span>
-                <span class="detail-text">${nombre}</span>
-            </div>
-            <div class="detail">
-                <span class="label" data-color="#707070">Referencia</span>
-                <span class="detail-text">${referencia}</span>
-            </div>
-            <div class="detail">
-                <span class="label" data-color="#707070">Número Nequi</span>
-                <span class="detail-text">${telefono}</span> <!-- Aquí se muestra sin formatear -->
-            </div>
-            <div class="detail">
-                <span class="label" data-color="#707070">Fecha</span>
-                <span class="detail-text">${new Date().toLocaleDateString('es-ES', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric'
-                })} a las ${new Date().toLocaleTimeString('es-ES', {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    hour12: true
-                })}</span>
-            </div>
-            <div class="detail">
-                <span class="label" data-color="#707070">¿Cuánto?</span>
-                <span class="detail-text">$ ${valor}</span>
-            </div>
-            <div class="detail" style="margin-top: 20px;">
-                <span class="plata-label">¿De dónde salió la plata?</span>
-            </div>
-            <div class="account-balance">
-                <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
-                <div>
-                    <span class="dispo">Disponible</span> <!-- Aquí se aplica la negrilla -->
-                    <span class="amount">$${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
-                </div>
-            </div>
-            <a href="#" class="problem-link">
-                <img src="https://i.postimg.cc/dVqqJSRw/pixelcut-export-2.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
-            </a>
-        `;
-
-        document.getElementById("inicio").style.display = "none";
-        document.getElementById("content").style.display = "block";
-        document.getElementById("content").innerHTML = content;
-
-        // Aplica el color de la etiqueta de acuerdo a su atributo data-color
-        document.querySelectorAll('.label').forEach(span => {
-            span.style.color = span.getAttribute('data-color');
-        });
-
-        // Aplica el color por defecto a los detalles
-        document.querySelectorAll('.detail-text').forEach(span => {
-            span.style.color = '#1c031d'; // Color por defecto
-            span.style.display = 'block'; // Fuerza que el texto esté en la misma línea con el título
-        });
-    });
-});
+    <div class="top-image">
+        <img src="https://i.postimg.cc/05DxDqc9/pixelcut-export-3.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
+    </div>
+    <div class="status"></div>
+    <div class="detail">
+        <span class="label" data-color="#707070">Para</span>
+        <span class="detail-text">${nombre}</span>
+    </div>
+    <div class="detail">
+        <span class="label" data-color="#707070">Referencia</span>
+        <span class="detail-text">${referencia}</span>
+    </div>
+    <div class="detail">
+        <span class="label" data-color="#707070">Número Nequi</span>
+        <span class="detail-text">${telefono}</span> <!-- Aquí se muestra sin formatear -->
+    </div>
+    <div class="detail">
+        <span class="label" data-color="#707070">Fecha</span>
+        <span class="detail-text">${new Date().toLocaleDateString('es-ES', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        })} a las ${new Date().toLocaleTimeString('es-ES', {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+        })}</span>
+    </div>
+    <div class="detail">
+        <span class="label" data-color="#707070">¿Cuánto?</span>
+        <span class="detail-text">$ ${valor}</span>
+    </div>
+    <div class="detail" style="margin-top: 20px;">
+        <img src="https://i.postimg.cc/nhmF4HNk/Picsart-24-09-01-03-20-32-256.jpg" alt="¿De dónde salió la plata?" class="plata-image" />
+    </div>
+    <div class="account-balance">
+        <img src="https://i.postimg.cc/6qy3vkM2/Picsart-24-08-03-01-26-01-809.png" alt="icon">
+        <div>
+            <img src="https://i.postimg.cc/nhmF4HNk/Picsart-24-09-01-03-20-32-256.jpg" alt="Disponible" class="dispo-image" />
+            <span class="amount">$${valor.split(',')[0]}<small>,${valor.split(',')[1]}</small></span>
+        </div>
+    </div>
+    <a href="#" class="problem-link">
+        <img src="https://i.postimg.cc/dVqqJSRw/pixelcut-export-2.jpg" alt="Problema con el movimiento" style="max-width: 100%; height: auto; display: inline-block;">
+    </a>
+`;
