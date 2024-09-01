@@ -191,7 +191,7 @@ body {
     margin-top: 17px;
 }
 
-.dispo {  
-    margin-left: -1px;
-    font-weight: 500; /* Ajusta el grosor del texto aquí */
+.dispo {
+    font-weight: 500; /* Peso de la fuente, ajustado */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Añadir sombra ligera */
 }
