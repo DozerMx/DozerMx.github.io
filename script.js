@@ -63,20 +63,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="https://i.postimg.cc/05DxDqc9/pixelcut-export-3.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
             </div>
             <div class="status"></div>
-            <div class="detail" style="color: #707070;">
-                <span>Para</span>
+            <div class="detail">
+                <span class="label" data-color="#707070">Para</span><br>
                 ${nombre}
             </div>
-            <div class="reference" style="color: #707070;">
-                <span>Referencia</span><br>
+            <div class="reference">
+                <span class="label" data-color="#707070">Referencia</span><br>
                 <span>${referencia}</span>
             </div>
-            <div class="detail" style="color: #707070;">
-                <span>Número Nequi</span>
+            <div class="detail">
+                <span class="label" data-color="#707070">Número Nequi</span><br>
                 ${telefono}
             </div>
-            <div class="detail" style="color: #707070;">
-                <span>Fecha</span>
+            <div class="detail">
+                <span class="label" data-color="#707070">Fecha</span><br>
                 ${new Date().toLocaleDateString('es-ES', {
                     day: 'numeric',
                     month: 'long',
@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     hour12: true
                 })}
             </div>
-            <div class="detail" style="color: #707070;">
-                <span>¿Cuánto?</span>
+            <div class="detail">
+                <span class="label" data-color="#707070">¿Cuánto?</span><br>
                 $ ${valor}
             </div>
             <div class="detail" style="margin-top: 20px;">
@@ -109,5 +109,10 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("inicio").style.display = "none";
         document.getElementById("content").style.display = "block";
         document.getElementById("content").innerHTML = content;
+
+        // Aplica el color de la etiqueta de acuerdo a su atributo data-color
+        document.querySelectorAll('.label').forEach(span => {
+            span.style.color = span.getAttribute('data-color');
+        });
     });
 });
