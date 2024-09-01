@@ -191,7 +191,9 @@ body {
     margin-top: 17px;
 }
 
-.dispo {
-    font-weight: 500; /* Peso de la fuente, ajustado */
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Añadir sombra ligera */
+/* Estilo para la imagen "Disponible" */
+.dispo-image {
+    width: auto;
+    height: 20px; /* Ajusta el tamaño de la imagen si es necesario */
+    margin-left: -1px;
 }
