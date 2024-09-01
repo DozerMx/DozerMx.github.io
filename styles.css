@@ -5,7 +5,6 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    /* Eliminado overflow: hidden; para permitir el desplazamiento */
 }
 
 /* Contenedor principal */
@@ -17,7 +16,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    /* Asegurando que el contenido se ajuste correctamente */
     overflow: hidden;
 }
 
@@ -46,8 +44,8 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1000;
     box-sizing: border-box;
-    height: auto; /* Ajustado para permitir la expansión en función del contenido */
-    overflow-y: auto; /* Permitir desplazamiento vertical */
+    height: auto;
+    overflow-y: auto;
 }
 
 .status {
@@ -64,19 +62,20 @@ body {
 
 .detail {
     margin-bottom: 10px;
-    color: #1c031d; /* Color predeterminado */
+    color: #1c031d;
     font-weight: 400;
 }
 
 .detail span {
     display: block;
     font-weight: 400;
+    color: #707070; /* Color para las palabras clave */
 }
 
 .reference {
     margin-top: 20px;
     padding-top: 10px;
-    color: #1c031d; /* Color predeterminado */
+    color: #707070;
     font-weight: 400;
 }
 
@@ -100,10 +99,6 @@ body {
     height: auto;
     margin-right: 5px;
     margin-left: -12px;
-}
-
-.account-balancel {
-    margin-left: -1px;
 }
 
 .account-balance .amount {
