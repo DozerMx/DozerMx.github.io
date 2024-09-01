@@ -193,5 +193,5 @@ body {
 
 .dispo {  
     margin-left: -1px;
-    font-weight: 510; /* Ajusta el grosor del texto aquí */
+    font-weight: bold; /* Ajusta el grosor del texto aquí */
 }
