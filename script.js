@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const content = `
             <div class="top-image">
-                <img src="https://i.postimg.cc/7Ls6sfsv/Picsart-24-08-25-02-28-55-342.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
+                <img src="https://i.postimg.cc/05DxDqc9/pixelcut-export-3.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
             </div>
             <div class="status"></div>
             <div class="detail">
