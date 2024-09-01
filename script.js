@@ -63,20 +63,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="https://i.postimg.cc/05DxDqc9/pixelcut-export-3.jpg" alt="Imagen principal" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; margin-bottom: 20px;">
             </div>
             <div class="status"></div>
-            <div class="detail">
-                <span style="color: #707070;">Para</span>
+            <div class="detail" style="color: #707070;">
+                <span>Para</span>
                 ${nombre}
             </div>
-            <div class="detail">
-                <span style="color: #707070;">¿Cuánto?</span>
-                $ ${valor}
+            <div class="reference" style="color: #707070;">
+                <span>Referencia</span><br>
+                <span>${referencia}</span>
             </div>
-            <div class="detail">
-                <span style="color: #707070;">Número Nequi</span>
+            <div class="detail" style="color: #707070;">
+                <span>Número Nequi</span>
                 ${telefono}
             </div>
-            <div class="detail">
-                <span style="color: #707070;">Fecha</span>
+            <div class="detail" style="color: #707070;">
+                <span>Fecha</span>
                 ${new Date().toLocaleDateString('es-ES', {
                     day: 'numeric',
                     month: 'long',
@@ -87,9 +87,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     hour12: true
                 })}
             </div>
-            <div class="reference">
-                <span style="color: #707070;">Referencia</span><br>
-                <span>${referencia}</span>
+            <div class="detail" style="color: #707070;">
+                <span>¿Cuánto?</span>
+                $ ${valor}
             </div>
             <div class="detail" style="margin-top: 20px;">
                 <span class="plata-label">¿De dónde salió la plata?</span>
