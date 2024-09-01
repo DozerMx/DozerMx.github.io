@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (value.length > 10) {
             value = value.slice(0, 10);
         }
-        e.target.value = value; // Formato sin espacios
+        e.target.value = value; // Aquí no se aplica ningún formato, solo se deja el número plano
     });
 
     const formulario = document.getElementById("formulario");
@@ -63,20 +63,20 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <div class="status"></div>
             <div class="detail">
-                <span class="label" data-color="#707070">Para</span><br>
-                ${nombre}
+                <span class="label" data-color="#707070">Para</span>
+                <span class="detail-text">${nombre}</span>
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">Referencia</span><br>
-                ${referencia}
+                <span class="label" data-color="#707070">Referencia</span>
+                <span class="detail-text">${referencia}</span>
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">Número Nequi</span><br>
-                ${telefono} <!-- Teléfono sin formato -->
+                <span class="label" data-color="#707070">Número Nequi</span>
+                <span class="detail-text">${telefono}</span> <!-- Aquí se muestra sin formatear -->
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">Fecha</span><br>
-                ${new Date().toLocaleDateString('es-ES', {
+                <span class="label" data-color="#707070">Fecha</span>
+                <span class="detail-text">${new Date().toLocaleDateString('es-ES', {
                     day: 'numeric',
                     month: 'long',
                     year: 'numeric'
@@ -84,11 +84,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     hour: '2-digit',
                     minute: '2-digit',
                     hour12: true
-                })}
+                })}</span>
             </div>
             <div class="detail">
-                <span class="label" data-color="#707070">¿Cuánto?</span><br>
-                $ ${valor}
+                <span class="label" data-color="#707070">¿Cuánto?</span>
+                <span class="detail-text">$ ${valor}</span>
             </div>
             <div class="detail" style="margin-top: 20px;">
                 <span class="plata-label">¿De dónde salió la plata?</span>
@@ -112,6 +112,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // Aplica el color de la etiqueta de acuerdo a su atributo data-color
         document.querySelectorAll('.label').forEach(span => {
             span.style.color = span.getAttribute('data-color');
+        });
+
+        // Aplica el color por defecto a los detalles
+        document.querySelectorAll('.detail-text').forEach(span => {
+            span.style.color = '#1c031d'; // Color por defecto
+            span.style.display = 'block'; // Fuerza que el texto esté en la misma línea con el título
         });
     });
 });
