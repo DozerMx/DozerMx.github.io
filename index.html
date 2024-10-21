@@ -3,44 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Movimiento</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Vinculación al archivo CSS externo -->
-    <link rel="stylesheet" href="fondo.css"> <!-- Vinculación al archivo CSS para el fondo -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"> <!-- Vinculación a Google Fonts: Manrope -->
+    <title>Actualización NequiDz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #e74c3c;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .vendedores {
+            text-align: left;
+        }
+        .vendedores strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .boton {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .boton:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <div class="key-container" id="key-container">
-        <h2>ingresa el id y contraseña</h2>
-        <label for="id-input">ID:</label>
-        <input type="text" id="id-input" placeholder="Introduce tu ID" />
-        <label for="key-input">Contraseña:</label>
-        <input type="password" id="key-input" placeholder="Introduce la clave" />
-        <button id="key-submit">Acceder</button>
-    </div>
-
-    <div class="container" id="inicio" style="display: none;">
-        <h2>Generar Comprobante</h2>
-        <form id="formulario">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-
-            <label for="telefono">Número de teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required><br><br>
-
-            <label for="valor">Valor:</label>
-            <input type="number" id="valor" name="valor" required><br><br>
-
-            <button type="submit">Generar Comprobante</button>
-        </form>
-    </div>
-
-    <div class="container" id="content" style="display: none;">
-        <!-- Aquí se generará el comprobante -->
-        <div class="generar-comprobante">
-            <!-- Contenido de la página para generar el comprobante -->
+    <div class="container">
+        <h1>¡Atención! ⚠️</h1>
+        <p>Lamentamos informarte que la versión actual de <strong>NequiDz</strong> ya no está disponible 🚫.</p>
+        <p>Para continuar utilizando todos los beneficios y mejoras de nuestra plataforma, deberás adquirir la nueva versión: <strong>NequiDz V2</strong> 🚀✨.</p>
+        <p>La nueva versión ofrece más seguridad, mejores funcionalidades y una experiencia mucho más fluida 🏆. No te la pierdas.</p>
+        <p>Para obtener más información sobre <strong>NequiDz V2</strong> y el enlace de descarga, visita nuestra página oficial en el siguiente link:</p>
+        <a href="https://nequi-nu.vercel.app/" class="boton">Página oficial 🌐</a>
+        <h2>Vendedores Autorizados 🔑</h2>
+        <div class="vendedores">
+            <strong>@Sxmuel</strong> 📞 +57 318 8383901
+            <strong>@José</strong> 📞 +57 312 6796773
+            <strong>@Felino</strong> 📞 +57 300 6378620
         </div>
+        <h3>Owner de la APK</h3>
+        <p><strong>〈☠️𝐃𝐨𝑧𝑍𝑧𝐞𝐫⿻𝐌𝒙⃟🔥〉</strong></p>
     </div>
 
-    <script src="script.js"></script> <!-- Vinculación al archivo JavaScript externo -->
+    <script>
+        document.querySelector('.boton').addEventListener('click', function() {
+            window.open('https://nequi-nu.vercel.app/', '_blank');
+        });
+    </script>
 </body>
 </html>
